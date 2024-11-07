@@ -332,8 +332,8 @@
 
 				path1 {
 					marvell,path-name = "mmp_pnpath";
-					marvell,overlay-num = <1>;
-					marvell,overlay-table = <1>;
+					marvell,overlay-num = <2>;
+					marvell,overlay-table = <0>,<1>;
 					marvell,output-type = <1>;
 					marvell,path-config = <0x10>;
 					marvell,link-config = <0x1>;
@@ -357,14 +357,20 @@
 				status = "okay";
                         };
 
+
+
             /*
+
             fb1: fboverlay {
                                	marvell,fb-name = "mmp-fb-overlay";
                             	marvell,path-name = "mmp_pnpath";
                             	marvell,overlay-id = <0>;
                             	status = "okay";
                            };
+
+
             */
+
 			/* eMMC */
 			sdh2: sdh@d4281000 {
 				pinctrl-names = "default", "fast";
