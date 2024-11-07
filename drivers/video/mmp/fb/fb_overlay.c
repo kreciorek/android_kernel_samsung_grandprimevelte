@@ -164,16 +164,19 @@ static int mmpfb_overlay_probe(struct platform_device *pdev)
 
 	/* get overlay */
 	fbi->overlay = mmp_path_get_overlay(fbi->path, overlay_id);
+	dev_info(fbi->dev, "At %s(%d)\n", __func__, __LINE__);
 	if (!fbi->overlay) {
 		ret = -EINVAL;
 		goto failed_destroy_mutex;
 	}
 
+	dev_info(fbi->dev, "At %s(%d)\n", __func__, __LINE__);
 	/* If path has master path, need initialize this path*/
 	if (fbi->path->slave && fbi->path->master &&
 		(!strcmp(fbi->path->slave->name, fbi->path->name)))
 		mmpfb_overlay_path_init(fbi);
 
+	dev_info(fbi->dev, "At %s(%d)\n", __func__, __LINE__);
 	ret = register_framebuffer(info);
 	if (ret < 0) {
 		dev_err(&pdev->dev, "Failed to register fb: %d\n", ret);
@@ -181,6 +184,7 @@ static int mmpfb_overlay_probe(struct platform_device *pdev)
 		goto failed_destroy_mutex;
 	}
 
+	dev_info(fbi->dev, "At %s(%d)\n", __func__, __LINE__);
 	mmpfb_overlay_vsync_notify_init(fbi);
 
 	dev_info(fbi->dev, "loaded to /dev/fb%d <%s>.\n",

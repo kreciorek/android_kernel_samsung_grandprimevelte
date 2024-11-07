@@ -82,7 +82,8 @@
 #endif
 
 #ifndef CLASS_NAME
-#   define CLASS_NAME               "graphics_class"
+/*#   define CLASS_NAME               "graphics_class"*/
+#   define CLASS_NAME               "GALCORE"
 #endif
 
 #define GetPageCount(size, offset)     ((((size) + ((offset) & ~PAGE_CACHE_MASK)) + PAGE_CACHE_SIZE - 1) >> PAGE_CACHE_SHIFT)

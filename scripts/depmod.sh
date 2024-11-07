@@ -62,3 +62,4 @@ if $depmod_hack_needed; then
 fi
 
 exit $ret
+

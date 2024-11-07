@@ -357,12 +357,19 @@
 				status = "okay";
                         };
 
+
+
+            /*
+
             fb1: fboverlay {
                                	marvell,fb-name = "mmp-fb-overlay";
                             	marvell,path-name = "mmp_pnpath";
                             	marvell,overlay-id = <0>;
                             	status = "okay";
                            };
+
+
+            */
 
 			/* eMMC */
 			sdh2: sdh@d4281000 {
